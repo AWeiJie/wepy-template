@@ -1,0 +1,70 @@
+<style lang="scss">
+
+</style>
+
+<template>
+  <view class="index-view">
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '小程序模板',
+      navigationBarTextStyle: 'black'
+    }
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {
+
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+
+    }
+
+    onShareAppMessage (res) {
+      if (res.from === 'button') {
+        console.log(res.target)
+      }
+      return {
+        title: '分享',
+        path: `/pages/index`,
+        success: function(res) {
+          // 转发成功
+          console.log('转发成功')
+        },
+        fail: function(res) {
+          // 转发失败
+        }
+      }
+    }
+
+    onPullDownRefresh () {
+      wepy.stopPullDownRefresh()
+    }
+
+    events = {}
+
+    // 页面加载后执行
+    onLoad (options) {
+
+    }
+
+    // 页面加载后执行
+    onShow () {
+
+    }
+  }
+</script>
